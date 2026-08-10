@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RemitGuide — 华人汇款对比：15 平台、覆盖 15 国</title>
+<meta name="description" content="对比 Wise、Remitly、熊猫速汇、WorldRemit、Instarem、Xoom、Western Union、MoneyGram、Revolut、Paysend、OFX、XE、TransferGo、LianLian Pay（连连）及银行直汇共 15 个平台，覆盖美国、澳洲、英国、加拿大、日本、韩国、新加坡、欧元区（意/西/法）、香港、新西兰、马来西亚、阿联酋 15 个出发国汇款到中国的实际费用。用汇款费用计算器输入金额与出发国即算到账。隐私友好，零追踪。"/>
+<link rel="canonical" href="https://david-cell.github.io/remitguide/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="RemitGuide"/>
+<meta property="og:title" content="RemitGuide — 华人汇款对比：15 平台、覆盖 15 国"/>
+<meta property="og:description" content="对比 Wise、Remitly、熊猫速汇、WorldRemit、Instarem、Xoom、Western Union、MoneyGram、Revolut、Paysend、OFX、XE、TransferGo、LianLian Pay（连连）及银行直汇共 15 个平台，覆盖美国、澳洲、英国、加拿大、日本、韩国、新加坡、欧元区（意/西/法）、香港、新西兰、马来西亚、阿联酋 15 个出发国汇款到中国的实际费用。用汇款费用计算器输入金额与出发国即算到账。隐私友好，零追踪。"/>
+<meta property="og:url" content="https://david-cell.github.io/remitguide/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="RemitGuide — 华人汇款对比：15 平台、覆盖 15 国"/>
+<meta name="twitter:description" content="对比 Wise、Remitly、熊猫速汇、WorldRemit、Instarem、Xoom、Western Union、MoneyGram、Revolut、Paysend、OFX、XE、TransferGo、LianLian Pay（连连）及银行直汇共 15 个平台，覆盖美国、澳洲、英国、加拿大、日本、韩国、新加坡、欧元区（意/西/法）、香港、新西兰、马来西亚、阿联酋 15 个出发国汇款到中国的实际费用。用汇款费用计算器输入金额与出发国即算到账。隐私友好，零追踪。"/>
+<meta property="og:image" content="https://david-cell.github.io/remitguide/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:image" content="https://david-cell.github.io/remitguide/og-image.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="tailwind.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="brutal.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RemitGuide","url":"https://david-cell.github.io/remitguide/","description":"华人跨境汇款平台对比与费用计算器"}</script>
+<!-- 隐私友好分析（可选启用）：把 data-domain 改为真实域名、去注释即可。启用后请同步更新 privacy.html 的"零数据"措辞。
+<script defer data-domain="david-cell.github.io" src="https://plausible.io/js/script.js"></script>
+-->
+</head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-error selection:text-on-error">
+<nav class="bg-surface w-full top-0 border-b-2 border-black">
+  <div class="flex justify-between items-center w-full px-page-margin py-6 max-w-screen-2xl mx-auto">
+    <a href="index.html" class="font-headline-lg text-headline-lg text-primary tracking-tight">RemitGuide</a>
+    <div class="hidden md:flex items-center gap-8"><a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all cursor-pointer active:opacity-70" href="index.html">平台</a><a class="text-secondary dark:text-secondary-fixed pb-1 hover:underline transition-all cursor-pointer active:opacity-70" href="calculator.html">计算器</a><a class="text-secondary dark:text-secondary-fixed pb-1 hover:underline transition-all cursor-pointer active:opacity-70" href="blog/index.html">指南</a><a class="text-secondary dark:text-secondary-fixed pb-1 hover:underline transition-all cursor-pointer active:opacity-70" href="about.html">关于</a></div>
+    <a href="calculator.html#alert" class="font-label-xs text-label-xs uppercase tracking-widest bg-primary text-on-primary px-6 py-3 hover:bg-surface-variant transition-colors border-2 border-primary">汇率警报</a>
+  </div>
+</nav><main class="flex-grow w-full max-w-screen-2xl mx-auto px-page-margin py-12 flex flex-col gap-16">
+<header class="swiss-grid">
+        <div class="col-span-12 lg:col-span-8 p-10 lg:p-20 flex flex-col justify-center gap-6">
+          <div class="self-start bg-error text-on-error font-label-xs text-label-xs uppercase px-3 py-1">汇款对比 · FEE TRANSPARENCY</div>
+          <h1 class="font-headline-display text-headline-display text-primary uppercase leading-none tracking-tighter">
+            汇款回国<br/><span class="text-error">更透明</span>
+          </h1>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            实时比较 Wise、Remitly、熊猫速汇、WorldRemit、Instarem 等主流平台，找出往中国汇款最划算的方式。所有数字都在你的浏览器里算出来——不上传、不追踪、不需注册。
+          </p>
+          <div class="flex gap-4 pt-2">
+            <a href="calculator.html" class="bg-error text-on-error font-label-xs text-label-xs uppercase tracking-widest px-6 py-4 border-2 border-error hover:bg-on-error hover:text-error transition-colors font-bold">开始：费用计算器</a>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-4 p-8 swiss-red flex flex-col justify-between items-start relative overflow-hidden">
+          <span class="material-symbols-outlined text-6xl mb-8 relative z-10">currency_exchange</span>
+          <div class="relative z-10">
+            <p class="font-label-xs text-label-xs uppercase tracking-widest mb-2">数据更新于 2026-08-08</p>
+            <p class="font-headline-lg text-headline-lg">实时中间价</p>
+          </div>
+        </div>
+      </header><section class="swiss-grid">
+        <div class="col-span-12 lg:col-span-4 p-8 flex flex-col gap-8 border-r-2 border-transparent lg:border-black">
+          <h2 class="font-headline-lg text-headline-lg text-primary border-b-2 border-black pb-4 mb-2">平台对比</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">15 个主流汇款平台，覆盖北美、澳洲、英国、欧洲、东亚、东南亚与中东共 15 个出发国汇款到中国。透明费率，实时估算到账。</p>
+          <div class="flex flex-col gap-6">
+            <div><div class="font-headline-display text-headline-display text-primary leading-none">15</div><div class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant mt-2">Platforms compared</div></div>
+            <div><div class="font-headline-display text-headline-display text-primary leading-none">0</div><div class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant mt-2">Bytes uploaded by you</div></div>
+            <div><div class="font-headline-display text-headline-display text-primary leading-none">15</div><div class="font-label-xs text-label-xs uppercase tracking-widest text-on-surface-variant mt-2">出发国 → 中国</div></div>
+          </div>
+          <a href="calculator.html" class="bg-error text-on-error font-label-xs text-label-xs uppercase tracking-widest py-4 border-2 border-error hover:bg-on-error hover:text-error transition-colors text-center">费用计算器</a>
+        </div>
+        <div class="col-span-12 lg:col-span-8 p-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4"><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">Wise</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">最佳大额</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,669</p>
+            <p class="text-on-surface-variant text-sm">大额汇款、追求真实汇率、长期高频用户</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://wise.com/invite/drhc/yiweid22?utm_source=remitguide&utm_medium=affiliate&utm_campaign=wise" target="_blank" rel="sponsored nofollow noopener">去注册 · 已含邀请码 ↗</a><button type="button" class="copy-code" data-code="yiweid22">复制邀请码</button>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">Remitly</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">新人首选</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,514</p>
+            <p class="text-on-surface-variant text-sm">新人首汇、小额急用、看重 App 体验</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://remitly.com/your-id?utm_source=remitguide&utm_medium=affiliate&utm_campaign=remitly" target="_blank" rel="sponsored nofollow noopener">去注册 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">熊猫速汇</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">中文友好</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,663</p>
+            <p class="text-on-surface-variant text-sm">中文用户、希望微信/支付宝收款、重视客服</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://pandaremit.com/?code=FU48FVU&utm_source=remitguide&utm_medium=affiliate&utm_campaign=panda" target="_blank" rel="sponsored nofollow noopener">去注册 · 已含邀请码 ↗</a><button type="button" class="copy-code" data-code="FU48FVU">复制邀请码</button>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">WorldRemit</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">CPA 高</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,575</p>
+            <p class="text-on-surface-variant text-sm">非中国走廊用户、CPA 活动期</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://worldremit.com/your-id?utm_source=remitguide&utm_medium=affiliate&utm_campaign=worldremit" target="_blank" rel="sponsored nofollow noopener">去注册 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">Instarem</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,649</p>
+            <p class="text-on-surface-variant text-sm">亚太区用户（新马/澳）、首笔奖励</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://instarem.com/?ref=SesNrE&utm_source=remitguide&utm_medium=affiliate&utm_campaign=instarem" target="_blank" rel="sponsored nofollow noopener">去注册 · 已含邀请码 ↗</a><button type="button" class="copy-code" data-code="SesNrE">复制邀请码</button>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">Xoom (PayPal)</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,562</p>
+            <p class="text-on-surface-variant text-sm">已用 PayPal、信任大品牌、需现金自取的用户</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://www.xoom.com/sign-up?utm_source=remitguide&utm_medium=affiliate&utm_campaign=xoom" target="_blank" rel="sponsored nofollow noopener">去官网 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">Western Union</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,515</p>
+            <p class="text-on-surface-variant text-sm">急需现金自取、偏远地区、无银行账户收款</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://www.westernunion.com/?utm_source=remitguide&utm_medium=affiliate&utm_campaign=westernunion" target="_blank" rel="sponsored nofollow noopener">去官网 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">MoneyGram</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,528</p>
+            <p class="text-on-surface-variant text-sm">现金自取、与 Western Union 比价的用户</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://www.moneygram.com/?utm_source=remitguide&utm_medium=affiliate&utm_campaign=moneygram" target="_blank" rel="sponsored nofollow noopener">去官网 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">Revolut</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,682</p>
+            <p class="text-on-surface-variant text-sm">欧盟/英国用户、已有 Revolut、追求优汇</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://www.revolut.com/f1-revolut?utm_source=remitguide&utm_medium=affiliate&utm_campaign=revolut" target="_blank" rel="sponsored nofollow noopener">去官网 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">Paysend</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,639</p>
+            <p class="text-on-surface-variant text-sm">欧洲小额汇款、追求低固定费</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://paysend.com/zh-cn?utm_source=remitguide&utm_medium=affiliate&utm_campaign=paysend" target="_blank" rel="sponsored nofollow noopener">去官网 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">OFX</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,683</p>
+            <p class="text-on-surface-variant text-sm">大额转账、企业/投资汇款、看重低加价</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://www.ofx.com/?utm_source=remitguide&utm_medium=affiliate&utm_campaign=ofx" target="_blank" rel="sponsored nofollow noopener">去官网 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">XE Money Transfer</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,582</p>
+            <p class="text-on-surface-variant text-sm">大额汇款、信任老牌合规品牌</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://www.xe.com/?utm_source=remitguide&utm_medium=affiliate&utm_campaign=xe" target="_blank" rel="sponsored nofollow noopener">去注册 ↗</a><button type="button" class="copy-code" data-code="XEREF-34FBSSI3">复制邀请码</button>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">TransferGo</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,609</p>
+            <p class="text-on-surface-variant text-sm">欧洲小额/中额汇款</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://trgo.co/en/r/0m12VE?utm_source=remitguide&utm_medium=affiliate&utm_campaign=transfergo" target="_blank" rel="sponsored nofollow noopener">去注册 ↗</a>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">LianLian Pay (连连)</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">邀请有奖</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,703</p>
+            <p class="text-on-surface-variant text-sm">中文用户、希望低汇率加价、用邀请码得奖励</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://global.lianlianpay.com/signup?bizSource=Y25fY29sbGVjdGlvbg==&invitecode=OEVF4ZQVEW&utm_source=remitguide&utm_medium=affiliate&utm_campaign=lianlian" target="_blank" rel="sponsored nofollow noopener">去注册 · 已含邀请码 ↗</a><button type="button" class="copy-code" data-code="OEVF4ZQVEW">复制邀请码</button>
+            </div>
+          </div><div class="bg-surface-container border-2 border-black p-6 flex flex-col gap-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-headline-lg text-headline-lg text-primary">银行直汇（中行/工行/招行）</h3>
+              <span class="font-label-xs text-label-xs bg-error text-on-error px-2 py-1 uppercase">亚太强</span>
+            </div>
+            <p class="font-label-xs text-label-xs text-on-surface-variant uppercase">$1000 → 到账 ≈ ¥6,649</p>
+            <p class="text-on-surface-variant text-sm">大额、合规优先、已开国内银行账户的用户</p>
+            <div class="mt-auto pt-2 flex flex-wrap gap-2">
+              <a class="font-label-xs text-label-xs bg-primary text-on-primary px-3 py-2 border-2 border-primary uppercase font-bold hover:bg-surface-variant hover:text-primary transition-colors" href="https://www.boc.cn/?utm_source=remitguide&utm_medium=affiliate&utm_campaign=bank-cn" target="_blank" rel="sponsored nofollow noopener">去官网 ↗</a>
+            </div>
+          </div></div>
+          <p class="font-body-md text-body-md text-on-surface-variant mt-6">示例为 $1000 → CNY 的估算到账（2026-08-08 数据）。用 <a class="link" href="calculator.html">Fee Calculator</a> 输入你的真实金额。</p>
+        </div>
+      </section><section class="grid grid-cols-1 md:grid-cols-3 gap-column-gap border-t-2 border-black pt-12">
+        <div class="col-span-1 flex flex-col gap-4">
+          <span class="material-symbols-outlined text-4xl text-primary">security</span>
+          <h3 class="font-bold text-xl uppercase tracking-wider">安全保证</h3>
+          <p class="text-on-surface-variant">所有列出的提供商均受 FCA / ASIC / MAS 等金融监管机构严格监管，确保您的资金安全无虞。</p>
+        </div>
+        <div class="col-span-1 flex flex-col gap-4">
+          <span class="material-symbols-outlined text-4xl text-primary">bolt</span>
+          <h3 class="font-bold text-xl uppercase tracking-wider">快速到账</h3>
+          <p class="text-on-surface-variant">大部分汇款可在数分钟至数小时内完成，避免因延迟造成的汇率波动风险。</p>
+        </div>
+        <div class="col-span-1 flex flex-col gap-4">
+          <span class="material-symbols-outlined text-4xl text-primary">visibility</span>
+          <h3 class="font-bold text-xl uppercase tracking-wider">完全透明</h3>
+          <p class="text-on-surface-variant">我们坚持零隐藏费用原则。所有费用与汇率都在你的浏览器本地计算——不上传、不追踪。</p>
+        </div>
+      </section><section>
+        <h2 class="font-headline-lg text-headline-lg text-primary uppercase border-b-2 border-black pb-2 mb-6 inline-block">Guides</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4"><a href="blog/us-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">US → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">美国汇款回中国 2026：Wise / Remitly / 熊猫速汇 哪个最便宜</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">从美国汇款回中国的完整对比：手续费、汇率加价、到账速度、限额与新人优惠，附 $1000 实测估算。</p>
+          </a><a href="blog/australia-whv-remit.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">AU → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">澳洲打工度假（WHV）汇款回国：完整攻略 + 费用对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">澳洲打工度假者每周汇款回国的省钱方案：平台选择、汇率加价、税务与转账频率建议。</p>
+          </a><a href="blog/wise-vs-remitly.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">US → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">Wise vs Remitly：我亲自汇了 $1000，结果出乎意料</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">第一人称实测：同一笔 $1000，Wise 和 Remitly 到账差多少？手续费、汇率、到账速度全对比。</p>
+          </a><a href="blog/china-fx-quota-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">合规 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">2026 年中国外汇额度科普：5 万美元怎么用才合规</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">个人年度 5 万美元便利化额度是什么、能做什么、哪些行为千万不能碰——中立合规科普。</p>
+          </a><a href="blog/wise-vs-worldremit.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">平台对比 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">Wise vs WorldRemit：大额汇款谁更省？</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">$5000 汇回中国，Wise 与 WorldRemit 的手续费、汇率加价与到账对比，附计算器。</p>
+          </a><a href="blog/wise-vs-instarem.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">平台对比 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">Wise vs Instarem：亚太走廊谁更强？</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">Wise 与 Instarem 的费率、到账与亚太覆盖对比，帮你看清低加价与低手续费。</p>
+          </a><a href="blog/remitly-vs-panda.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">平台对比 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">Remitly vs 熊猫速汇：新人首汇怎么选？</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">Remitly 与熊猫速汇的新人优惠、汇率加价与中文体验对比。</p>
+          </a><a href="blog/panda-vs-worldremit.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">平台对比 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">熊猫速汇 vs WorldRemit：中文用户与微信收款</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">熊猫速汇与 WorldRemit 的中文体验、收款方式与汇率加价对比。</p>
+          </a><a href="blog/worldremit-vs-instarem.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">平台对比 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">WorldRemit vs Instarem：低费率与广覆盖怎么权衡</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">WorldRemit 与 Instarem 的覆盖、费率与到账对比。</p>
+          </a><a href="blog/instarem-vs-panda.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">平台对比 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">Instarem vs 熊猫速汇：亚太谁更优？</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">Instarem 与熊猫速汇在澳洲/新马走廊的费率与体验对比。</p>
+          </a><a href="blog/wise-remitly-panda-3way.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">平台对比 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">Wise / Remitly / 熊猫速汇 三方大乱斗</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">Wise、Remitly、熊猫速汇同台对比：手续费、汇率加价、速度与适用人群。</p>
+          </a><a href="blog/us-student-remit.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">US → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">美国留学生汇款攻略：学费与生活费怎么汇最省</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">在美留学生把美元汇回中国的省钱方案：平台选择、单据与频率建议。</p>
+          </a><a href="blog/au-student-remit.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">AU → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">澳洲留学生汇款回国：学费与生活费怎么汇</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">澳洲留学生 AUD→CNY 的汇款方案与频率建议。</p>
+          </a><a href="blog/us-large-amount.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">US → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">美国大额汇款攻略：超过 $1 万怎么汇更安全</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">美国大额汇款（$1 万以上）的风控、分笔与到账注意事项。</p>
+          </a><a href="blog/au-large-amount.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">AU → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">澳洲大额汇款攻略：AUD 大额回中国怎么汇</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">澳洲大额汇款（A$1 万以上）的风控与费率建议。</p>
+          </a><a href="blog/us-to-alipay-wechat.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">US → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">美国汇款到微信/支付宝：哪些平台支持</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">从美国汇款直接到微信或支付宝余额的平台与注意事项。</p>
+          </a><a href="blog/au-to-alipay-wechat.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">AU → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">澳洲汇款到微信/支付宝：平台与到账</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">从澳洲汇款直接到微信或支付宝的平台对比。</p>
+          </a><a href="blog/mid-market-rate-explained.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">费用汇率 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">中间价是什么？为什么它决定你汇亏还是赚</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">解释中间价（mid-market rate）与银行/平台买卖价的差异。</p>
+          </a><a href="blog/exchange-rate-markup.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">费用汇率 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">汇率加价怎么算？一张表看懂 Markup 对到账的影响</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">用例子解释 markup（汇率加价）如何吃掉你的到账金额。</p>
+          </a><a href="blog/hidden-fees-remittance.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">费用汇率 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">汇款的隐藏费用：除了手续费还有哪些坑</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">拆解电汇中转行费、收款行费、汇率加价等隐藏成本。</p>
+          </a><a href="blog/bank-swift-vs-app.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">费用汇率 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">银行 SWIFT 电汇 vs 汇款 App：到底差多少</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">传统银行电汇与 Wise/熊猫等 App 的速度、费用与体验对比。</p>
+          </a><a href="blog/best-time-to-send-money.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">费用汇率 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">什么时候汇款最划算？汇率波动与警报用法</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">解释汇率短期波动规律与如何用警报抓住好汇率。</p>
+          </a><a href="blog/usdcny-outlook-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">费用汇率 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">2026 年美元兑人民币：怎么自己判断走势（中立科普）</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">中立科普如何跟踪 USD/CNY，而非预测点位。</p>
+          </a><a href="blog/is-remittance-to-china-legal.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">合规科普 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">汇款回国合法吗？海外华人合规边界</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">讲清个人汇款回国的合法边界与红线。</p>
+          </a><a href="blog/declare-source-of-funds.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">合规科普 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">资金来源怎么申报？汇款回国的材料清单</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">汇款回国时如何准备资金来源与用途证明。</p>
+          </a><a href="blog/anti-money-laundering-remittance.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">合规科普 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">反洗钱与汇款：大额会被查吗？</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">解释反洗钱（AML）风控与大额汇款的注意点。</p>
+          </a><a href="blog/china-tax-on-foreign-income.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">合规科普 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">海外收入要交税吗？CRS 与居民个人科普</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">中立科普中国税务居民与海外收入申报（CRS），不构建议。</p>
+          </a><a href="blog/chinese-new-year-remittance.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">场景人群 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">春节给家人汇款：避开高峰与限额</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">春节前后汇款回国的避峰、限额与温馨提示。</p>
+          </a><a href="blog/remittance-for-tuition.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">场景人群 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">学费汇款攻略：凭单据合规汇出</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">留学生学费汇款的单据、额度与平台建议。</p>
+          </a><a href="blog/freelancer-receive-overseas.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">场景人群 · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">自由职业者怎么收海外款？PayPal/Wise/熊猫对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">自由职业者接收海外客户款项的平台对比与税率注意。</p>
+          </a><a href="blog/uk-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">GB → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">英国汇款回中国 2026：Wise / Revolut / 熊猫速汇 费用与速度对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">英国华人汇款回国对比：英镑汇率加价、手续费、到账速度，附 £1000 实测估算。</p>
+          </a><a href="blog/canada-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">CA → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">加拿大汇款回中国：平台对比与加元汇率加价实测</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">加拿大华人汇款回国：加元（CAD）汇率加价、手续费、到账速度全对比。</p>
+          </a><a href="blog/japan-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">JP → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">日本汇款回中国：在日华人常用平台与手续费对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">日本华人汇款回国：日元（JPY）汇率加价、熊猫速汇/Instarem/Wise 对比。</p>
+          </a><a href="blog/korea-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">KR → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">韩国汇款回中国：韩元汇款平台对比（在韩华人）</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">韩国华人汇款回国：韩元（KRW）汇率加价、手续费、到账速度对比。</p>
+          </a><a href="blog/singapore-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">SG → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">新加坡汇款回中国：新元汇款平台与到账速度</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">新加坡华人汇款回国：新元（SGD）汇率加价、Instarem/熊猫/Wise 对比。</p>
+          </a><a href="blog/eu-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">EU → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">欧洲（欧元区）汇款回中国：德国/法国等通用方案</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">欧元区（德国/法国等）华人汇款回国：欧元汇率加价、Revolut/Paysend/Wise 对比。</p>
+          </a><a href="blog/hongkong-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">HK → CN · 2026-08-08</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">香港汇款回内地：港币汇款最划算的方式</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">香港汇款回内地：港币（HKD）汇率加费、熊猫速汇/银行/Wise 对比与到账速度。</p>
+          </a><a href="blog/nz-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">NZ → CN · 2026-08-09</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">新西兰汇款回中国 2026：Wise / OFX / 熊猫速汇 费用与速度对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">新西兰（NZD）汇款回中国：汇率加价、Wise/OFX/熊猫速汇/西联对比与到账速度。</p>
+          </a><a href="blog/my-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">MY → CN · 2026-08-09</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">马来西亚汇款回中国 2026：熊猫速汇 / Instarem / Wise 哪个划算</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">马来西亚（MYR）汇款回中国：林吉特汇率、熊猫速汇/Instarem/Wise/银行对比与到账速度。</p>
+          </a><a href="blog/it-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">IT → CN · 2026-08-09</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">意大利汇款回中国 2026：Wise / Revolut / TransferGo 欧洲走廊对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">意大利（EUR）汇款回中国：欧元汇率、Wise/Revolut/TransferGo/Paysend 对比与到账速度。</p>
+          </a><a href="blog/es-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">ES → CN · 2026-08-09</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">西班牙汇款回中国 2026：Wise / TransferGo / Paysend 欧洲走廊对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">西班牙（EUR）汇款回中国：欧元汇率、Wise/TransferGo/Revolut/Paysend 对比与到账速度。</p>
+          </a><a href="blog/fr-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">FR → CN · 2026-08-09</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">法国汇款回中国 2026：Wise / Revolut / Xoom 欧洲走廊对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">法国（EUR）汇款回中国：欧元汇率、Wise/Revolut/Xoom/Paysend 对比与到账速度。</p>
+          </a><a href="blog/ae-to-china-2026.html" class="bg-surface-container border-2 border-black p-5 hover:bg-surface-container-low transition-all block">
+            <div class="font-label-xs text-label-xs text-error uppercase mb-2">AE → CN · 2026-08-09</div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">阿联酋汇款回中国 2026：Wise / Remitly / Xoom 中东走廊对比</h3>
+            <p class="text-on-surface-variant mt-1 text-sm">阿联酋（AED）汇款回中国：迪拉姆汇率、Wise/Remitly/Xoom/西联对比与到账速度。</p>
+          </a></div>
+      </section><section class="swiss-red border-2 border-black p-12 relative">
+        <div class="absolute -top-4 -right-4 bg-surface text-primary font-label-xs text-label-xs uppercase px-4 py-2 border-2 border-black font-black rotate-3">Zero Data Collected</div>
+        <h3 class="font-headline-lg text-headline-lg text-on-error mb-4 border-b-2 border-black pb-2 inline-block">Everything runs in your browser</h3>
+        <p class="font-body-md text-body-md text-on-error max-w-2xl">No account, no server, no upload. Fees and rates are computed locally with JavaScript. This site never tracks you — and it never will.</p>
+      </section><script>document.querySelectorAll(".copy-code").forEach(function(b){b.addEventListener("click",function(){var c=b.getAttribute("data-code");function ok(){b.textContent="已复制 ✓";setTimeout(function(){b.textContent="复制邀请码";},1500);}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(c).then(ok);}else{var t=document.createElement("textarea");t.value=c;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok();}catch(e){}document.body.removeChild(t);}});});</script>
+</main>
+<footer class="bg-surface w-full border-t-2 border-black">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-page-margin py-12 gap-row-gap max-w-screen-2xl mx-auto">
+    <div class="font-headline-lg text-headline-lg text-primary">RemitGuide</div>
+    <div class="flex flex-wrap justify-center gap-6 font-label-xs text-label-xs uppercase tracking-widest text-secondary">
+      <a class="hover:text-primary transition-colors duration-200" href="privacy.html">Privacy Policy</a>
+      <a class="hover:text-primary transition-colors duration-200" href="disclosure.html">Editorial Guidelines</a>
+      <a class="hover:text-primary transition-colors duration-200" href="disclosure.html">Terms of Service</a>
+      <a class="hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+    </div>
+    <div class="font-label-xs text-label-xs uppercase tracking-widest text-secondary">© 2026 RemitGuide. Zero data collected.</div>
+  </div>
+</footer></body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>汇款费用计算器 — 15 国 → 中国，15 平台到账对比 | RemitGuide</title>
+<meta name="description" content="输入汇款金额与出发国（美/澳/英/加/日/韩/新/欧/港），实时比较 Wise、Remitly、熊猫速汇、Xoom、Western Union、MoneyGram、Revolut、Paysend、OFX 等汇往中国的手续费、汇率加价和到账金额。全程浏览器内计算，不上传任何数据。"/>
+<link rel="canonical" href="https://david-cell.github.io/remitguide/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="RemitGuide"/>
+<meta property="og:title" content="汇款费用计算器 — 15 国 → 中国，15 平台到账对比 | RemitGuide"/>
+<meta property="og:description" content="输入汇款金额与出发国（美/澳/英/加/日/韩/新/欧/港），实时比较 Wise、Remitly、熊猫速汇、Xoom、Western Union、MoneyGram、Revolut、Paysend、OFX 等汇往中国的手续费、汇率加价和到账金额。全程浏览器内计算，不上传任何数据。"/>
+<meta property="og:url" content="https://david-cell.github.io/remitguide/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="汇款费用计算器 — 15 国 → 中国，15 平台到账对比 | RemitGuide"/>
+<meta name="twitter:description" content="输入汇款金额与出发国（美/澳/英/加/日/韩/新/欧/港），实时比较 Wise、Remitly、熊猫速汇、Xoom、Western Union、MoneyGram、Revolut、Paysend、OFX 等汇往中国的手续费、汇率加价和到账金额。全程浏览器内计算，不上传任何数据。"/>
+<meta property="og:image" content="https://david-cell.github.io/remitguide/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:image" content="https://david-cell.github.io/remitguide/og-image.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="tailwind.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="brutal.css"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"RemitGuide Fee Calculator","url":"https://david-cell.github.io/remitguide/calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"browserRequirements":"Requires JavaScript"}</script>
+<!-- 隐私友好分析（可选启用）：把 data-domain 改为真实域名、去注释即可。启用后请同步更新 privacy.html 的"零数据"措辞。
+<script defer data-domain="david-cell.github.io" src="https://plausible.io/js/script.js"></script>
+-->
+</head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-error selection:text-on-error">
+<nav class="bg-surface w-full top-0 border-b-2 border-black">
+  <div class="flex justify-between items-center w-full px-page-margin py-6 max-w-screen-2xl mx-auto">
+    <a href="index.html" class="font-headline-lg text-headline-lg text-primary tracking-tight">RemitGuide</a>
+    <div class="hidden md:flex items-center gap-8"><a class="text-secondary dark:text-secondary-fixed pb-1 hover:underline transition-all cursor-pointer active:opacity-70" href="index.html">平台</a><a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all cursor-pointer active:opacity-70" href="calculator.html">计算器</a><a class="text-secondary dark:text-secondary-fixed pb-1 hover:underline transition-all cursor-pointer active:opacity-70" href="blog/index.html">指南</a><a class="text-secondary dark:text-secondary-fixed pb-1 hover:underline transition-all cursor-pointer active:opacity-70" href="about.html">关于</a></div>
+    <a href="calculator.html#alert" class="font-label-xs text-label-xs uppercase tracking-widest bg-primary text-on-primary px-6 py-3 hover:bg-surface-variant transition-colors border-2 border-primary">汇率警报</a>
+  </div>
+</nav><main class="flex-grow w-full max-w-screen-2xl mx-auto px-page-margin py-12 flex flex-col gap-16">
+<div class="t-tool-hero">
+      <div class="crumb">Tools / 01 · Fee Calculator</div>
+      <h1>汇款费用计算器</h1>
+      <p class="sub">输入金额与出发国，实时对比各平台到账金额、手续费与汇率加价。</p>
+    </div><div class="brutal-card" style="padding:28px;">
+      <label for="amt">汇款金额（发送金额）</label>
+      <input id="amt" type="number" value="1000" min="1" />
+      <label for="from">出发国</label>
+      <div class="brutal-select" data-target="from">
+        <button type="button" class="brutal-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+          <span class="brutal-select-label">美国 (USD)</span>
+          <svg class="brutal-select-chevron" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="#1b1c19" stroke-width="2.5" stroke-linecap="square"/></svg>
+        </button>
+        <ul class="brutal-select-list" role="listbox">
+          <li data-value="US"  class="selected" role="option" aria-selected="true">美国 (USD)</li>
+          <li data-value="AU" role="option">澳大利亚 (AUD)</li>
+          <li data-value="GB" role="option">英国 (GBP)</li>
+          <li data-value="CA" role="option">加拿大 (CAD)</li>
+          <li data-value="JP" role="option">日本 (JPY)</li>
+          <li data-value="KR" role="option">韩国 (KRW)</li>
+          <li data-value="SG" role="option">新加坡 (SGD)</li>
+          <li data-value="EU" role="option">欧元区 (EUR)</li>
+          <li data-value="HK" role="option">香港 (HKD)</li>
+          <li data-value="NZ" role="option">新西兰 (NZD)</li>
+          <li data-value="MY" role="option">马来西亚 (MYR)</li>
+          <li data-value="IT" role="option">意大利 (EUR)</li>
+          <li data-value="ES" role="option">西班牙 (EUR)</li>
+          <li data-value="FR" role="option">法国 (EUR)</li>
+          <li data-value="AE" role="option">阿联酋 (AED)</li>
+        </ul>
+        <!-- hidden native select — keeps getElementById('from').value working -->
+        <select id="from" style="display:none!important;" tabindex="-1">
+          <option value="US" selected>美国 (USD)</option><option value="AU">澳大利亚 (AUD)</option><option value="GB">英国 (GBP)</option><option value="CA">加拿大 (CAD)</option><option value="JP">日本 (JPY)</option><option value="KR">韩国 (KRW)</option><option value="SG">新加坡 (SGD)</option><option value="EU">欧元区 (EUR)</option><option value="HK">香港 (HKD)</option><option value="NZ">新西兰 (NZD)</option><option value="MY">马来西亚 (MYR)</option><option value="IT">意大利 (EUR)</option><option value="ES">西班牙 (EUR)</option><option value="FR">法国 (EUR)</option><option value="AE">阿联酋 (AED)</option>
+        </select>
+      </div>
+      <label for="to">目的国</label>
+      <div class="brutal-select" data-target="to">
+        <button type="button" class="brutal-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+          <span class="brutal-select-label">中国 (CNY)</span>
+          <svg class="brutal-select-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="#1b1c19" stroke-width="2.5" stroke-linecap="square"/></svg>
+        </button>
+        <ul class="brutal-select-list" role="listbox">
+          <li data-value="CN" class="selected" role="option" aria-selected="true">中国 (CNY)</li>
+        </ul>
+        <select id="to" style="display:none!important;" tabindex="-1">
+          <option value="CN" selected>中国 (CNY)</option>
+        </select>
+      </div>
+      <div class="row">
+        <button class="act" onclick="calcRemit()">Calculate</button>
+        <button class="ghost noflex" onclick="resetRemit()">Reset</button>
+      </div>
+      <div class="out" id="remitOut">—</div>
+      <p class="hint">Fee model per platform is stored in <code>data/platforms.json</code> and can be updated without touching the page code. 数据更新于 2026-08-08，以平台实时报价为准。</p>
+      <script>
+      
+var FX = {"USDCNY": 6.75, "AUDCNY": 4.76, "GBPCNY": 9.08, "CADCNY": 4.83, "JPYCNY": 0.0428, "KRWCNY": 0.00479, "SGDCNY": 5.28, "EURCNY": 7.8, "HKDCNY": 0.86, "NZDCNY": 3.99, "MYRCNY": 1.65, "AEDCNY": 1.84, "as_of": "2026-08-09"};
+var PLATS = {"wise": {"name": "Wise", "affiliate_link": "https://wise.com/invite/drhc/yiweid22", "commission": "£10 / 个人户 · £50 / 商业户", "cookie": "终身", "fee_structure": "固定小额费 + 按比例费（不同走廊不同）；汇率取中间价附近", "default": {"fixed": 4.99, "pct": 0.004, "markup": 0.003, "speed": "几分钟–1天"}, "fees": {"US->CN": {"fixed": 4.99, "pct": 0.004, "markup": 0.003, "speed": "几分钟–1天"}, "AU->CN": {"fixed": 3.99, "pct": 0.004, "markup": 0.003, "speed": "几分钟–1天"}}, "supported_from": ["US", "AU", "GB", "CA", "JP", "KR", "SG", "EU", "HK", "NZ", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–1 天（视走廊与风控）", "min": 1, "max": 1000000, "new_user_offer": "以官方为准（常为首笔免小额费）", "pros": ["汇率接近中间价、透明", "费用明示无隐藏", "终身 cookie，联盟价值最高"], "cons": ["小额汇款固定费占比偏高", "部分走廊到账需人工审核"], "best_for": "大额汇款、追求真实汇率、长期高频用户"}, "remitly": {"name": "Remitly", "affiliate_link": "https://remitly.com/your-id", "commission": "$4–20 / lead（经 FlexOffers）", "cookie": "按活动（通常 30–90 天）", "fee_structure": "双模式：低费率+汇率加价 / 免手续费+更高汇率加价", "default": {"fixed": 0, "pct": 0, "markup": 0.035, "speed": "几分钟–1天"}, "fees": {"US->CN": {"fixed": 0, "pct": 0, "markup": 0.035, "speed": "几分钟–1天"}, "AU->CN": {"fixed": 0, "pct": 0, "markup": 0.04, "speed": "几分钟–1天"}}, "supported_from": ["US", "AU", "CA", "GB", "EU", "NZ", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–1 天（Express 更快，费率更高）", "min": 1, "max": 100000, "new_user_offer": "新人首汇常免手续费或送券", "pros": ["新人优惠力度大", "操作简单、App 体验好", "CPA 结算"], "cons": ["汇率加价明显（中间价 3–4%）", "大额限制较严"], "best_for": "新人首汇、小额急用、看重 App 体验"}, "panda": {"name": "熊猫速汇", "affiliate_link": "https://pandaremit.com/?code=FU48FVU", "commission": "新人免手续费券 / 返现（非标准 CPA）", "cookie": "—", "fee_structure": "汇率贴近中间价 + 小额固定费（按国家略有差异）", "default": {"fixed": 4.99, "pct": 0, "markup": 0.008, "speed": "10分钟–1天"}, "fees": {"US->CN": {"fixed": 4.99, "pct": 0, "markup": 0.008, "speed": "10 分钟–1 天"}, "AU->CN": {"fixed": 4.99, "pct": 0, "markup": 0.008, "speed": "10 分钟–1 天"}}, "supported_from": ["US", "AU", "JP", "SG", "HK", "MY"], "to": ["CN"], "speed": "通常 10 分钟–1 天（人民币收款）", "min": 1, "max": 50000, "new_user_offer": "新用户首笔免手续费", "pros": ["中文界面、客服好沟通", "汇率较贴近中间价", "到账快、微信/支付宝收款"], "cons": ["部分走廊覆盖有限", "平台规模小于 Wise"], "best_for": "中文用户、希望微信/支付宝收款、重视客服"}, "worldremit": {"name": "WorldRemit", "affiliate_link": "https://worldremit.com/your-id", "commission": "£20–50 CPA（经 FlexOffers/Impact）", "cookie": "45 天", "fee_structure": "固定手续费 + 汇率加价", "default": {"fixed": 3.99, "pct": 0.002, "markup": 0.02, "speed": "几分钟–2天"}, "fees": {"US->CN": {"fixed": 3.99, "pct": 0.002, "markup": 0.02, "speed": "几分钟–2 天"}, "AU->CN": {"fixed": 3.99, "pct": 0.002, "markup": 0.022, "speed": "几分钟–2 天"}}, "supported_from": ["US", "AU", "GB", "CA", "EU", "JP", "SG", "NZ", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–2 天（取决于收款方式）", "min": 1, "max": 100000, "new_user_offer": "以官方为准", "pros": ["覆盖国家广", "CPA 佣金高"], "cons": ["汇率加价偏高", "不支持微信/支付宝直收"], "best_for": "非中国走廊用户、CPA 活动期"}, "instarem": {"name": "Instarem", "affiliate_link": "https://instarem.com/?ref=SesNrE", "commission": "注册奖 + 首笔交易奖（月付）", "cookie": "30 天", "fee_structure": "汇率加价为主，手续费低", "default": {"fixed": 2.99, "pct": 0, "markup": 0.012, "speed": "1天内"}, "fees": {"US->CN": {"fixed": 2.99, "pct": 0, "markup": 0.012, "speed": "1 天内"}, "AU->CN": {"fixed": 2.99, "pct": 0, "markup": 0.012, "speed": "1 天内"}}, "supported_from": ["US", "AU", "SG", "IN", "MY", "GB", "EU", "NZ", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "通常 1 天内", "min": 1, "max": 200000, "new_user_offer": "首笔注册奖励（以官方为准）", "pros": ["低手续费", "亚太走廊强", "官方直申最快"], "cons": ["品牌认知度低", "汇率加价中等"], "best_for": "亚太区用户（新马/澳）、首笔奖励"}, "xoom": {"name": "Xoom (PayPal)", "affiliate_link": "https://www.xoom.com/sign-up", "commission": "无（本站未接入联盟，仅作对比）", "cookie": "—", "fee_structure": "PayPal 旗下，费率含汇率加价；常对银行卡/账户收款", "default": {"fixed": 2.99, "pct": 0, "markup": 0.025, "speed": "几分钟–2天"}, "supported_from": ["US", "CA", "GB", "EU", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–2 天（银行入账/现金自取）", "min": 1, "max": 50000, "new_user_offer": "以官方为准", "pros": ["PayPal 生态、信任度高", "支持现金自取点", "覆盖广"], "cons": ["汇率加价中等", "无个人联盟计划", "限额较严"], "best_for": "已用 PayPal、信任大品牌、需现金自取的用户"}, "westernunion": {"name": "Western Union", "affiliate_link": "https://www.westernunion.com/", "commission": "无（本站未接入联盟，仅作对比）", "cookie": "—", "fee_structure": "固定手续费 + 汇率加价；全球现金网络", "default": {"fixed": 5.0, "pct": 0, "markup": 0.03, "speed": "几分钟–1天"}, "supported_from": ["US", "AU", "GB", "CA", "JP", "KR", "SG", "EU", "HK", "NZ", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–1 天（现金自取最快）", "min": 1, "max": 5000, "new_user_offer": "以官方为准", "pros": ["全球网点最多、现金自取强", "几乎覆盖所有国家", "紧急到账快"], "cons": ["汇率加价偏高", "无个人联盟计划", "单笔限额低"], "best_for": "急需现金自取、偏远地区、无银行账户收款"}, "moneygram": {"name": "MoneyGram", "affiliate_link": "https://www.moneygram.com/", "commission": "无（本站未接入联盟，仅作对比）", "cookie": "—", "fee_structure": "固定手续费 + 汇率加价；全球代理网络", "default": {"fixed": 4.99, "pct": 0, "markup": 0.028, "speed": "几分钟–1天"}, "supported_from": ["US", "AU", "GB", "CA", "JP", "KR", "SG", "EU", "HK", "NZ", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–1 天（现金自取）", "min": 1, "max": 5000, "new_user_offer": "以官方为准", "pros": ["网点广、现金自取", "与多家银行合作", "到账快"], "cons": ["汇率加价偏高", "无个人联盟计划"], "best_for": "现金自取、与 Western Union 比价的用户"}, "revolut": {"name": "Revolut", "affiliate_link": "https://www.revolut.com/f1-revolut", "commission": "无（本站未接入联盟，仅作对比）", "cookie": "—", "fee_structure": "Plus/高级账户可享接近中间价兑换；标准账户有周末加价", "default": {"fixed": 0, "pct": 0, "markup": 0.01, "speed": "即时–1天"}, "supported_from": ["GB", "EU", "US", "AU", "NZ", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "即时–1 天（视走廊）", "min": 1, "max": 200000, "new_user_offer": "以官方为准", "pros": ["高级账户汇率接近中间价", "App 体验好", "多币种账户"], "cons": ["标准账户周末有加价", "部分走廊到账需审核", "无个人联盟计划"], "best_for": "欧盟/英国用户、已有 Revolut、追求优汇"}, "paysend": {"name": "Paysend", "affiliate_link": "https://paysend.com/zh-cn", "commission": "无（本站未接入联盟，仅作对比）", "cookie": "—", "fee_structure": "多为固定小额费（约 €1–2）+ 低汇率加价", "default": {"fixed": 1.5, "pct": 0, "markup": 0.015, "speed": "几分钟–1天"}, "supported_from": ["GB", "EU", "US", "CA", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–1 天", "min": 1, "max": 100000, "new_user_offer": "首笔常免手续费（以官方为准）", "pros": ["固定费极低", "欧洲走廊强", "到账快"], "cons": ["品牌较小", "无个人联盟计划", "部分走廊覆盖有限"], "best_for": "欧洲小额汇款、追求低固定费"}, "ofx": {"name": "OFX", "affiliate_link": "https://www.ofx.com/", "commission": "无（本站未接入联盟，仅作对比）", "cookie": "—", "fee_structure": "大额专营，按比例费 + 低汇率加价，无单笔上限压力", "default": {"fixed": 0, "pct": 0.005, "markup": 0.005, "speed": "1–2天"}, "supported_from": ["US", "AU", "GB", "CA", "EU", "SG", "NZ", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "1–2 天", "min": 1000, "max": 1000000, "new_user_offer": "以官方为准", "pros": ["大额费率优、无上限压力", "专属客户经理", "汇率加价低"], "cons": ["起汇额高（约 $1000）", "到账较慢", "无个人联盟计划"], "best_for": "大额转账、企业/投资汇款、看重低加价"}, "xe": {"name": "XE Money Transfer", "affiliate_link": "https://www.xe.com/", "commission": "XE 推荐奖励：新用户首笔达标，双方各得礼品卡（App 内输入 XEREF-34FBSSI3）", "cookie": "按活动", "fee_structure": "按比例费 + 汇率加价，银行级合规", "default": {"fixed": 0, "pct": 0.005, "markup": 0.02, "speed": "1-2 天"}, "supported_from": ["US", "AU", "GB", "CA", "JP", "KR", "SG", "EU", "HK", "NZ", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "1-2 天", "min": 1, "max": 500000, "new_user_offer": "以官方为准", "pros": ["老牌汇率服务商、合规强", "大额友好", "有联盟可赚佣金"], "cons": ["到账较慢", "汇率加价中等"], "best_for": "大额汇款、信任老牌合规品牌"}, "transfergo": {"name": "TransferGo", "affiliate_link": "https://trgo.co/en/r/0m12VE", "commission": "TransferGo 推荐奖励（trgo.co 推荐链接，rafCode=0m12VE，首笔双方得奖励）", "cookie": "按活动", "fee_structure": "固定/比例费 + 低汇率加价，欧洲走廊强", "default": {"fixed": 0, "pct": 0.003, "markup": 0.018, "speed": "几分钟-1 天"}, "supported_from": ["GB", "EU", "US", "CA", "IT", "ES", "FR"], "to": ["CN"], "speed": "几分钟-1 天（欧洲走廊最快）", "min": 1, "max": 100000, "new_user_offer": "首笔常免手续费（以官方为准）", "pros": ["欧洲走廊快且便宜", "有联盟可赚佣金", "固定费低"], "cons": ["非欧洲覆盖有限", "个人联盟待接入"], "best_for": "欧洲小额/中额汇款"}, "lianlian": {"name": "LianLian Pay (连连)", "affiliate_link": "https://global.lianlianpay.com/signup?bizSource=Y25fY29sbGVjdGlvbg==&invitecode=OEVF4ZQVEW", "commission": "邀请奖励（链接已带邀请码 OEVF4ZQVEW，注册即绑定，双方得奖励）", "cookie": "按活动", "fee_structure": "汇率贴近中间价 + 多走廊低/免手续费（以官方实时报价为准）", "default": {"fixed": 0, "pct": 0, "markup": 0.007, "speed": "几分钟–1天"}, "fees": {"US->CN": {"fixed": 0, "pct": 0, "markup": 0.007, "speed": "几分钟–1 天"}, "AU->CN": {"fixed": 0, "pct": 0, "markup": 0.007, "speed": "几分钟–1 天"}}, "supported_from": ["US", "AU", "GB", "CA", "JP", "SG", "HK", "EU", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "几分钟–1 天（人民币收款）", "min": 1, "max": 50000, "new_user_offer": "新用户首笔常免手续费（以官方为准）", "pros": ["中文界面、华人熟悉", "汇率较贴近中间价", "邀请码已带、注册即绑定"], "cons": ["部分走廊覆盖有限", "费率以官方实时为准"], "best_for": "中文用户、希望低汇率加价、用邀请码得奖励"}, "bank-cn": {"name": "银行直汇（中行/工行/招行）", "affiliate_link": "https://www.boc.cn/", "commission": "无（银行直汇对比，不赚佣金）", "cookie": "-", "fee_structure": "银行现汇卖出价（相对中间价加价）+ 电报费；额度走个人便利化 5 万美元/年", "default": {"fixed": 10, "pct": 0.001, "markup": 0.004, "speed": "1-3 天"}, "supported_from": ["US", "AU", "GB", "CA", "JP", "KR", "SG", "EU", "HK", "NZ", "MY", "IT", "ES", "FR", "AE"], "to": ["CN"], "speed": "1-3 天（电汇）", "min": 1, "max": 50000, "new_user_offer": "以各行政策为准", "pros": ["信任度高、合规稳妥", "适合已有国内银行账户", "可走便利化额度"], "cons": ["汇率加价（牌价）且收电报费", "到账慢、单证繁琐", "无佣金"], "best_for": "大额、合规优先、已开国内银行账户的用户"}};
+function calcRemit(){
+  var amt = parseFloat(document.getElementById('amt').value) || 0;
+  var from = document.getElementById('from').value;      // 'US' | 'AU' | 'GB' | ...
+  var to = document.getElementById('to').value;          // 'CN' for now
+  var corridor = from + '->' + to;
+  var CCY = {US:'USD',AU:'AUD',GB:'GBP',CA:'CAD',JP:'JPY',KR:'KRW',SG:'SGD',EU:'EUR',HK:'HKD',NZ:'NZD',MY:'MYR',IT:'EUR',ES:'EUR',FR:'EUR',AE:'AED'};
+  var out = document.getElementById('remitOut');
+  if (amt <= 0) { out.className = 'out'; out.innerHTML = 'Please enter an amount.'; return; }
+  var mid = FX[CCY[from] + 'CNY'];
+  var rows = '', best = null, bestNet = 0;
+  for (var key in PLATS) {
+    var p = PLATS[key];
+    var f = (p.fees && p.fees[corridor]) || p.default;
+    var fee = f.fixed + amt * f.pct;
+    var rate = mid * (1 - f.markup);
+    var received = (amt - fee) * rate;
+    var loss = (amt * mid) - received;   // total cost in CNY: fee + markup
+    if (!best || received > bestNet) { best = p; bestNet = received; }
+    var css = 'var';
+    rows += '<tr class="' + css + '"><td><b>' + p.name + '</b></td>'
+          + '<td>¥' + received.toFixed(2) + '</td>'
+          + '<td>' + fee.toFixed(2) + ' ' + from + '</td>'
+          + '<td>' + (f.markup * 100).toFixed(2) + '%</td>'
+          + '<td>' + loss.toFixed(2) + '</td></tr>';
+  }
+  out.className = 'out ok';
+  out.innerHTML = '<p><b>汇 ' + amt.toLocaleString() + ' 到中国，估算到账：</b></p>'
+    + '<div class="tablewrap"><table class="cmp"><thead><tr><th>Platform</th><th>到账金额 (CNY)</th><th>手续费</th><th>汇率加价</th><th>总成本 (CNY)</th></tr></thead><tbody>'
+    + rows + '</tbody></table></div>'
+    + '<p style="margin-top:12px"><b>最划算：' + best.name + '</b> — 到账 ¥' + bestNet.toFixed(2) + '，比其他平台多收 ¥' + (bestNet - Math.min.apply(null, Object.keys(PLATS).map(function(k){ var p=PLATS[k]; var f=(p.fees && p.fees[corridor])||p.default; return (amt - f.fixed - amt*f.pct) * mid * (1 - f.markup); }))).toFixed(2) + '。</p>'
+    + '<p class="hint">按中间价 ¥' + mid.toFixed(4) + ' 估算（' + FX.as_of + '）。实际以平台实时报价为准，本工具不构成财务建议。</p>';
+}
+function resetRemit(){
+  document.getElementById('amt').value = 1000;
+  document.getElementById('from').value = 'US';
+  document.getElementById('to').value = 'CN';
+  syncBrutal('from'); syncBrutal('to');
+  calcRemit();
+}
+function syncBrutal(id){
+  var wrap = document.querySelector('.brutal-select[data-target="'+id+'"]');
+  if(!wrap) return;
+  var hidden = wrap.querySelector('select');
+  var label = wrap.querySelector('.brutal-select-label');
+  var val = hidden.value;
+  wrap.querySelectorAll('li').forEach(function(li){
+    var on = li.getAttribute('data-value') === val;
+    li.classList.toggle('selected', on);
+    li.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  var sel = wrap.querySelector('li.selected');
+  if(sel) label.textContent = sel.textContent;
+}
+(function(){
+  document.querySelectorAll('.brutal-select').forEach(function(wrap){
+    var trigger = wrap.querySelector('.brutal-select-trigger');
+    var list = wrap.querySelector('.brutal-select-list');
+    var hidden = wrap.querySelector('select');
+    var label = wrap.querySelector('.brutal-select-label');
+    trigger.addEventListener('click', function(e){
+      e.stopPropagation();
+      var wasOpen = wrap.classList.contains('open');
+      document.querySelectorAll('.brutal-select.open').forEach(function(o){ if(o!==wrap) o.classList.remove('open'); });
+      wrap.classList.toggle('open', !wasOpen);
+      trigger.setAttribute('aria-expanded', (!wasOpen).toString());
+    });
+    list.querySelectorAll('li').forEach(function(li){
+      li.addEventListener('click', function(e){
+        e.stopPropagation();
+        list.querySelectorAll('li').forEach(function(x){ x.classList.remove('selected'); x.setAttribute('aria-selected','false'); });
+        li.classList.add('selected'); li.setAttribute('aria-selected','true');
+        label.textContent = li.textContent;
+        if(hidden) hidden.value = li.getAttribute('data-value');
+        wrap.classList.remove('open'); trigger.setAttribute('aria-expanded','false');
+        if(typeof calcRemit === 'function') calcRemit();
+      });
+    });
+  });
+  document.addEventListener('click', function(){ document.querySelectorAll('.brutal-select.open').forEach(function(o){ o.classList.remove('open'); o.querySelector('.brutal-select-trigger').setAttribute('aria-expanded','false'); }); });
+  syncBrutal('from'); syncBrutal('to');
+})();
+calcRemit();
+
+      </script>
+      <div class="cta-mail">
+        <h3 class="font-headline-sm text-headline-sm uppercase">汇率警报</h3>
+        <p>设置目标汇率，达到时邮件提醒你（USD/AUD/GBP/CAD/JPY/KRW/SGD/EUR/HKD → CNY）。邮箱仅用于汇率通知，不发送营销。</p>
+        <form id="alertForm" class="alert-form" novalidate>
+          <input type="email" name="email" id="alertEmail" placeholder="you@example.com" required aria-label="邮箱" />
+          <div class="alert-row">
+            <select name="pair" id="alertPair" required aria-label="货币对">
+              <option value="USDCNY">1 USD → CNY</option>
+              <option value="AUDCNY">1 AUD → CNY</option>
+              <option value="GBPCNY">1 GBP → CNY</option>
+              <option value="CADCNY">1 CAD → CNY</option>
+              <option value="JPYCNY">100 JPY → CNY</option>
+              <option value="KRWCNY">100 KRW → CNY</option>
+              <option value="SGDCNY">1 SGD → CNY</option>
+              <option value="EURCNY">1 EUR → CNY</option>
+              <option value="HKDCNY">1 HKD → CNY</option>
+            </select>
+            <select name="cond" id="alertCond" aria-label="触发条件">
+              <option value="ge">≥ 目标时</option>
+              <option value="le">≤ 目标时</option>
+            </select>
+            <input type="number" step="0.0001" name="target" id="alertTarget" placeholder="如 7.20" required aria-label="目标汇率" />
+          </div>
+          <div class="alert-actions">
+            <button class="act" type="submit" id="alertSubmit">订阅提醒</button>
+            <span id="alertStatus" class="alert-status" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+        <script>
+        (function(){
+          var f = document.getElementById('alertForm'); if(!f) return;
+          f.addEventListener('submit', function(e){
+            e.preventDefault();
+            var s = document.getElementById('alertStatus');
+            var btn = document.getElementById('alertSubmit');
+            var email = document.getElementById('alertEmail').value.trim();
+            var pair = document.getElementById('alertPair').value;
+            var cond = document.getElementById('alertCond').value;
+            var target = parseFloat(document.getElementById('alertTarget').value);
+            if(!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !(target > 0)){
+              s.textContent = '请填写有效邮箱与目标汇率'; s.style.color = '#ba1a1a'; return;
+            }
+            btn.disabled = true; s.textContent = '提交中…'; s.style.color = '';
+            fetch('/api/subscribe', {
+              method:'POST',
+              headers:{'Content-Type':'application/json','Accept':'application/json'},
+              body: JSON.stringify({email:email, pair:pair, cond:cond, target:target})
+            }).then(function(r){ return r.json().then(function(d){ return {ok:r.ok, d:d||{}}; }).catch(function(){ return {ok:r.ok, d:{}}; }); })
+              .then(function(res){
+                if(res.ok){ s.textContent = '已订阅 ✓ 达到目标汇率会邮件提醒你'; s.style.color = '#1b1c19'; f.reset(); }
+                else { s.textContent = (res.d && res.d.error) ? res.d.error : '订阅失败，请稍后再试'; s.style.color = '#ba1a1a'; }
+              })
+              .catch(function(){ s.textContent = '订阅接口暂不可用（需在支持 Serverless 的托管上部署后生效）'; s.style.color = '#ba1a1a'; })
+              .finally(function(){ btn.disabled = false; });
+          });
+        })();
+        </script>
+      </div>
+    </div><p class="hint" style="margin-top:14px;border-top:2px solid #1b1c19;padding-top:10px;">数据更新于 2026-08-08，实际费用以平台实时报价为准。</p><p class="hint" style="margin-top:14px;border-top:2px solid #1b1c19;padding-top:10px;">Affiliate disclosure: some links on this page are affiliate links. If you sign up via them we may earn a commission at no extra cost to you. We only recommend platforms we would use ourselves. — 部分链接为联盟链接，不影响你的费用。</p>
+</main>
+<footer class="bg-surface w-full border-t-2 border-black">
+  <div class="flex flex-col md:flex-row justify-between items-center w-full px-page-margin py-12 gap-row-gap max-w-screen-2xl mx-auto">
+    <div class="font-headline-lg text-headline-lg text-primary">RemitGuide</div>
+    <div class="flex flex-wrap justify-center gap-6 font-label-xs text-label-xs uppercase tracking-widest text-secondary">
+      <a class="hover:text-primary transition-colors duration-200" href="privacy.html">Privacy Policy</a>
+      <a class="hover:text-primary transition-colors duration-200" href="disclosure.html">Editorial Guidelines</a>
+      <a class="hover:text-primary transition-colors duration-200" href="disclosure.html">Terms of Service</a>
+      <a class="hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+    </div>
+    <div class="font-label-xs text-label-xs uppercase tracking-widest text-secondary">© 2026 RemitGuide. Zero data collected.</div>
+  </div>
+</footer></body></html>
