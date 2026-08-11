@@ -193,10 +193,8 @@ def faq_block(items):
 # HOME
 # ============================================================
 def build_index():
-    title = 'RemitGuide — 华人汇款对比：15 平台、覆盖 15 国'
-    meta = ('对比 Wise、Remitly、熊猫速汇、WorldRemit、Instarem、Xoom、Western Union、MoneyGram、Revolut、Paysend、OFX、XE、TransferGo、LianLian Pay（连连）及银行直汇共 15 个平台，'
-            '覆盖美国、澳洲、英国、加拿大、日本、韩国、新加坡、欧元区（意/西/法）、香港、新西兰、马来西亚、阿联酋 15 个出发国汇款到中国的实际费用。'
-            '用汇款费用计算器输入金额与出发国即算到账。隐私友好，零追踪。')
+    title = 'RemitGuide — 对比 15 个汇款平台，找到汇回中国最省的 1 个 [2026]'
+    meta = ('对比 Wise、Remitly、熊猫速汇、WorldRemit、Instarem、Xoom、西联、MoneyGram、Revolut、Paysend、OFX、XE、TransferGo、连连 等 15 个平台汇款回中国的手续费、汇率加价与到账金额，覆盖美/澳/英/加/日/韩/新/欧/港等 15 国。免费费用计算器，隐私友好、零追踪。')
     schema = ('{"@context":"https://schema.org","@type":"WebSite","name":"RemitGuide","url":"' + BASE + '",'
               '"description":"华人跨境汇款平台对比与费用计算器"}')
 
@@ -404,11 +402,11 @@ calcRemit();
 # ^ NOTE: 计算逻辑见 build_calculator（FX/PLATS 数据在构建时注入）
 
 def build_calculator():
-    title = '汇款费用计算器 — 15 国 → 中国，15 平台到账对比 | RemitGuide'
+    title = '汇款费用计算器 — 15 国→中国，实时对比 15 平台到账金额 [2026]'
     meta = ('输入汇款金额与出发国（美/澳/英/加/日/韩/新/欧/港），实时比较 Wise、Remitly、熊猫速汇、Xoom、'
             'Western Union、MoneyGram、Revolut、Paysend、OFX 等汇往中国的手续费、汇率加价和到账金额。'
             '全程浏览器内计算，不上传任何数据。')
-    schema = ('{"@context":"https://schema.org","@type":"WebApplication","name":"RemitGuide Fee Calculator",'
+    schema = ('{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RemitGuide Fee Calculator",'
               '"url":"' + BASE + 'calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any",'
               '"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"browserRequirements":"Requires JavaScript"}')
     fx_json = json.dumps(FX, ensure_ascii=False)
@@ -1170,7 +1168,7 @@ def related_for(slug):
     return (same[:3] if len(same) >= 2 else others[:3])
 
 def build_blog_index():
-    title = '汇款指南 Guides — 15 国→中国走廊攻略与平台对比 | RemitGuide'
+    title = '汇款指南 — 15 国→中国走廊攻略与平台对比 [2026] | RemitGuide'
     meta = '美国、澳洲、英国、加拿大、日本、韩国、新加坡、欧元区、香港汇款回中国的攻略与平台对比：手续费、汇率加价、到账速度、外汇额度科普。'
     schema = ('{"@context":"https://schema.org","@type":"CollectionPage","name":"RemitGuide Guides","url":"' + BASE + 'blog/index.html"}')
     hero = ('''<div class="t-tool-hero">
@@ -1194,7 +1192,7 @@ def build_blog_post(slug):
         return None
     _slug, pt, pd, corr, ex, body_html = rec
     title = '%s | RemitGuide' % pt
-    meta = ex
+    meta = ex + ' 免费、无追踪，用 RemitGuide 费用计算器即时对比各平台到账。'
     schema = ('{"@context":"https://schema.org","@type":"Article","headline":"%s","datePublished":"%s",'
               '"author":{"@type":"Person","name":"RemitGuide"},"publisher":{"@type":"Organization","name":"RemitGuide"},'
               '"mainEntityOfPage":"%sblog/%s.html"}' % (pt.replace('"', '\\"'), pd, BASE, slug))
