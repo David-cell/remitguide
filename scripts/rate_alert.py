@@ -48,7 +48,7 @@ UNIT = {"JPY": 100, "KRW": 100}
 UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "")
 UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
-FROM_EMAIL = os.environ.get("FROM_EMAIL", "alerts@david-cell.github.io")
+FROM_EMAIL = os.environ.get("FROM_EMAIL", "alerts@remit.david-cells.com")
 RATE_API = os.environ.get("RATE_API", "https://api.frankfurter.app/latest")
 SUBS_KEY = "remitguide:subscribers"
 

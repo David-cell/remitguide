@@ -2,7 +2,7 @@
   "_meta": {
     "note": "汇率已更新为 2026-08-08/09 真实中间价（来源：中国外汇交易中心每日中间价 + XE 交叉验证；NZD 3.99 / MYR 1.65 / AED 1.84 / EUR 7.80 复用）。覆盖出发国：US/AU/GB/CA/JP/KR/SG/EU/HK/NZ/MY/IT/ES/FR/AE 共 15 国 → 中国。联盟链接状态：Wise/Instarem/熊猫速汇 推荐码已写进联盟链接；XE（XEREF-34FBSSI3，App 内首笔达标双方得礼品卡）与 TransferGo（trgo.co 推荐链接 rafCode=0m12VE）、LianLian Pay（连连，global.lianlianpay.com 邀请码 OEVF4ZQVEW）已接入真实推荐、可赚推荐奖励；Remitly/WorldRemit 仍为占位 your-id；Xoom/Western Union/MoneyGram/Revolut/Paysend/OFX 为本站未接入联盟的对比条目（仅作横向比较，不赚佣金）；银行直汇组（中行/工行/招行）为官网直链对比，无佣金。费率 markup 为各平台典型值，正式上线前仍建议二次核实官网实时报价。",
     "data_updated": "2026-08-08",
-    "base_url": "https://david-cell.github.io/remitguide/",
+    "base_url": "https://remit.david-cells.com/",
     "fx": {
       "USDCNY": 6.75,
       "AUDCNY": 4.76,

@@ -15,10 +15,10 @@ from datetime import date
 # ============================================================
 # SITE CONFIG（上线前替换占位）
 # ============================================================
-BASE = 'https://david-cell.github.io/remitguide/'   # GitHub Pages 项目子路径
+BASE = 'https://remit.david-cells.com/'   # Cloudflare Pages 自定义域名
 SITE_NAME = 'RemitGuide'
 SITE_TAGLINE = 'Remit Guide · 华人汇款指南'
-CONTACT_EMAIL = 'hello@david-cell.github.io'  # TODO: 换成真实可收信邮箱/表单
+CONTACT_EMAIL = 'hello@remit.david-cells.com'  # TODO: 换成真实可收信邮箱/表单
 AFF_DISCLOSURE = ('<p class="hint" style="margin-top:14px;border-top:2px solid #1b1c19;padding-top:10px;">'
                   'Affiliate disclosure: some links on this page are affiliate links. '
                   'If you sign up via them we may earn a commission at no extra cost to you. '
@@ -106,7 +106,7 @@ HEAD_BRU = ('''<!DOCTYPE html>
 <link rel="stylesheet" href="__CSS__"/>
 <script type="application/ld+json">__SCHEMA__</script>
 <!-- 隐私友好分析（可选启用）：把 data-domain 改为真实域名、去注释即可。启用后请同步更新 privacy.html 的"零数据"措辞。
-<script defer data-domain="david-cell.github.io" src="https://plausible.io/js/script.js"></script>
+<script defer data-domain="remit.david-cells.com" src="https://plausible.io/js/script.js"></script>
 -->
 </head>''')
 
