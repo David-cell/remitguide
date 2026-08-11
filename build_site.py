@@ -520,9 +520,10 @@ def build_calculator():
               method:'POST',
               headers:{'Content-Type':'application/json','Accept':'application/json'},
               body: JSON.stringify({email:email, pair:pair, cond:cond, target:target})
-            }).then(function(r){ return r.json().then(function(d){ return {ok:r.ok, d:d||{}}; }).catch(function(){ return {ok:r.ok, d:{}}; }); })
+            }).then(function(r){ return r.json().then(function(d){ return {ok:r.ok, status:r.status, d:d||{}}; }).catch(function(){ return {ok:r.ok, status:r.status, d:{}}; }); })
               .then(function(res){
                 if(res.ok){ s.textContent = '已订阅 ✓ 达到目标汇率会邮件提醒你'; s.style.color = '#1b1c19'; f.reset(); }
+                else if(res.status === 404 || res.status === 405){ s.textContent = '订阅服务尚未部署：当前托管方式不支持后端接口（需 Serverless 托管）'; s.style.color = '#ba1a1a'; }
                 else { s.textContent = (res.d && res.d.error) ? res.d.error : '订阅失败，请稍后再试'; s.style.color = '#ba1a1a'; }
               })
               .catch(function(){ s.textContent = '订阅接口暂不可用（需在支持 Serverless 的托管上部署后生效）'; s.style.color = '#ba1a1a'; })
